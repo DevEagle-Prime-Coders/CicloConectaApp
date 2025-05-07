@@ -1,0 +1,38 @@
+{
+  "name": "InfoMetodosContraceptivos",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+          "required": false,
+          "dataType": "@MetodoContraceptivo",
+          "name": "metodo",
+          "value": "$metodo",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "pt-br",
+          "speech": "Existem diversos métodos para evitar a gravidez, como pílulas, injeções, DIU, camisinha masculina e feminina, entre outros. Cada um funciona de um jeito e tem suas vantagens e desvantagens. Se você me disser um método específico que te interessa, posso te dar mais detalhes. Ou posso te dar uma visão geral. O que prefere? Lembre-se, a escolha do melhor método para você deve ser feita junto com um profissional de saúde."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

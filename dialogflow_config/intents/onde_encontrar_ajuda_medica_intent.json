@@ -1,0 +1,30 @@
+{
+  "name": "OndeEncontrarAjudaMedica",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "pt-br",
+          "speech": "Posso te ajudar a encontrar serviços de saúde próximos a você. No nosso aplicativo, temos uma seção chamada 'Mapa de Serviços' que mostra clínicas e hospitais. Você gostaria de acessá-la agora?"
+        }
+        // Adicionar sugestão de chip/botão para ir ao Mapa de Serviços no app
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

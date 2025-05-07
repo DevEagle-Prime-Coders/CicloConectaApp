@@ -1,0 +1,29 @@
+{
+  "name": "InfoISTs",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "pt-br",
+          "speech": "ISTs são Infecções Sexualmente Transmissíveis, ou seja, infecções que podem ser passadas de uma pessoa para outra durante a relação sexual sem proteção. Algumas comuns são HIV, sífilis, gonorreia, clamídia e HPV. Muitas vezes, as ISTs não apresentam sintomas no início, por isso é importante se prevenir e fazer exames regularmente. Quer saber sobre prevenção ou sintomas específicos?"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

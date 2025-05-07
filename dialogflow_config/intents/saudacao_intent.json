@@ -1,0 +1,33 @@
+{
+  "name": "Saudacao",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "pt-br",
+          "speech": "Olá! Eu sou a Maya, sua assistente virtual para informações sobre saúde da mulher aqui no CicloConecta. 😊 Como posso te ajudar hoje? Você pode me perguntar sobre ciclo menstrual, gravidez, métodos para evitar filhos, infecções ou outros temas relacionados à sua saúde."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

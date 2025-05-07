@@ -1,0 +1,34 @@
+{
+  "name": "FallbackIntent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "pt-br",
+          "speech": "Desculpe, não entendi muito bem sua pergunta. 😕 Você poderia tentar perguntar de outra forma? Lembre-se que posso te ajudar com informações sobre ciclo menstrual, gravidez, métodos para evitar filhos e infecções."
+        },
+        {
+          "type": 0,
+          "lang": "pt-br",
+          "speech": "Hmm, essa pergunta é um pouco complexa para mim. Que tal tentarmos com outras palavras? Ou você pode explorar nossa Biblioteca de Conteúdo para mais informações."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

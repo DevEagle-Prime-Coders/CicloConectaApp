@@ -1,0 +1,29 @@
+{
+  "name": "SintomasGravidez",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "pt-br",
+          "speech": "Alguns sinais comuns de gravidez incluem atraso menstrual, seios sensíveis ou inchados, enjoos (às vezes com vômitos), cansaço e vontade de urinar com mais frequência. No entanto, cada mulher é diferente e nem todas apresentam os mesmos sintomas, ou com a mesma intensidade. A única forma de confirmar é fazendo um teste de gravidez e consultando um profissional de saúde. Se você acha que pode estar grávida, o ideal é procurar um serviço de saúde."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

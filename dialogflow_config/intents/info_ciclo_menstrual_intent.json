@@ -1,0 +1,29 @@
+{
+  "name": "InfoCicloMenstrual",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "pt-br",
+          "speech": "O ciclo menstrual é o tempo que vai do primeiro dia de uma menstruação até o dia antes da próxima menstruação. Dura em média 28 dias, mas pode variar de mulher para mulher, geralmente entre 21 e 35 dias. Ele é dividido em fases e é controlado por hormônios. Se quiser saber mais sobre as fases ou como calcular seu período fértil, me diga! O rastreador de ciclo aqui no app também pode te ajudar a acompanhar."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}
