@@ -1,78 +1,95 @@
-# Aplicativo CicloConecta com Chatbot Maya (Protótipo)
+# CicloConecta Mobile App with Chatbot Maya (Prototype)
 
-Este é o código-fonte do protótipo do aplicativo móvel CicloConecta, desenvolvido com React Native e Expo, incluindo a estrutura para o chatbot Maya com integração (simulada) ao Dialogflow ES.
+This is the source code for the prototype of the CicloConecta mobile app, developed with React Native and Expo. It includes the structure for the chatbot "Maya" with a (simulated) integration to Dialogflow ES.
 
-## Estrutura do Projeto
+## 🌟 Project Objective
 
--   `/screens`: Contém todas as telas do aplicativo, incluindo `ChatbotScreen.js`.
--   `/navigation`: Contém a configuração da navegação (`AppNavigator.js`).
--   `/dialogflow_config`: Contém exemplos de arquivos JSON de intents para importação no Dialogflow ES.
--   `App.js`: Ponto de entrada principal do aplicativo.
--   `package.json`: Lista as dependências do projeto.
+The main goal of **CicloConecta** is to empower women and girls in vulnerable contexts, focusing on three pillars:
 
-## Como Executar o Aplicativo Localmente
+- **Reproductive Health:** Providing accurate and personalized information.
+- **Service Connection:** Facilitating access to health professionals and services.
+- **Socioeconomic Empowerment:** Offering financial education and skills training.
 
-1.  **Pré-requisitos:**
-    *   Node.js (versão LTS recomendada)
-    *   npm ou Yarn
-    *   Expo CLI: `npm install -g expo-cli`
-    *   Um emulador Android (Android Studio) ou iOS (Xcode) configurado no seu computador, ou o aplicativo Expo Go instalado em um dispositivo físico.
+Additionally, the app aims to create a supportive community for experience sharing and combating stigma.
 
-2.  **Descompacte o Projeto:**
-    *   Extraia o conteúdo do arquivo `cicloconecta-app.zip` para uma pasta no seu computador.
+**Visual Style:**
 
-3.  **Instale as Dependências:**
-    *   Abra um terminal ou prompt de comando na pasta raiz do projeto (onde está o arquivo `package.json`).
-    *   Execute o comando: `npm install` (ou `yarn install` se você usa Yarn).
+- **Colors:** While the project does not specify a color palette, the prototype website uses shades of pink (from light to vibrant) combined with white and neutral gray tones. This combination conveys warmth, trust, and femininity—culturally appropriate for the target audience.
+- **Logo:** No official logo exists yet. The prototype uses the stylized name “CicloConecta.”
+- **Slogan:** The prototype's featured phrase is:  
+  `"CicloConecta: Empowering your health and well-being."`
+- **Style:** A modern, clean, minimalist, and illustrative visual approach was chosen to ensure clarity, trust, and accessibility.
 
-4.  **Inicie o Servidor de Desenvolvimento Expo:**
-    *   No mesmo terminal, execute: `npx expo start`
-    *   Isso abrirá o Metro Bundler no seu navegador e exibirá um QR Code.
+---
 
-5.  **Execute no Emulador/Dispositivo:**
-    *   **Emulador Android:** Com o emulador Android já em execução, pressione `a` no terminal onde o Metro Bundler está rodando.
-    *   **Emulador iOS:** Com o emulador iOS já em execução, pressione `i` no terminal.
-    *   **Dispositivo Físico (com Expo Go):** Instale o app Expo Go no seu celular (Android ou iOS). Escaneie o QR Code exibido no terminal ou no navegador com o app Expo Go.
+## 📁 Project Structure
 
-## Configurando a Integração Real com Dialogflow ES
+- `/screens`: Contains all app screens, including `ChatbotScreen.js`.
+- `/navigation`: Contains navigation setup (`AppNavigator.js`).
+- `/dialogflow_config`: Contains example JSON intent files for importing into Dialogflow ES.
+- `App.js`: Main application entry point.
+- `package.json`: Lists all project dependencies.
 
-A tela `screens/ChatbotScreen.js` está preparada para se comunicar com um agente Dialogflow ES, mas atualmente as respostas são simuladas.
+---
 
-Para conectar ao seu agente Dialogflow real:
+## ▶️ How to Run the App Locally
 
-1.  **Crie/Configure seu Agente no Dialogflow ES:**
-    *   Acesse o [console do Dialogflow ES](https://dialogflow.cloud.google.com/).
-    *   Crie um novo agente ou use um existente.
-    *   Você pode importar os arquivos JSON de exemplo da pasta `/dialogflow_config/intents` para criar os intents básicos que preparamos (Saudacao, InfoCicloMenstrual, etc.).
-    *   Treine seu agente após criar/importar os intents.
+### 1. **Prerequisites:**
 
-2.  **Obtenha as Credenciais da Conta de Serviço:**
-    *   No Google Cloud Platform (GCP), vá para "IAM e Admin" > "Contas de serviço".
-    *   Crie uma nova conta de serviço ou use uma existente que tenha a permissão "Cliente da API do Dialogflow" (roles/dialogflow.apiClient).
-    *   Crie uma chave JSON para esta conta de serviço e faça o download do arquivo JSON.
+- Node.js (LTS version recommended)
+- npm or Yarn
+- Expo CLI: `npm install -g expo-cli`
+- Android emulator (via Android Studio) or iOS simulator (via Xcode), or Expo Go installed on a physical device
 
-3.  **Atualize o Código do Aplicativo:**
-    *   Abra o arquivo `/screens/ChatbotScreen.js` no seu editor de código.
-    *   Localize as seguintes constantes no início do arquivo:
-        ```javascript
-        const DIALOGFLOW_PROJECT_ID = 'SEU_PROJECT_ID_AQUI';
-        const DIALOGFLOW_SERVICE_ACCOUNT_KEY_JSON = { /* ... estrutura JSON ... */ };
-        ```
-    *   Substitua `'SEU_PROJECT_ID_AQUI'` pelo ID do seu projeto Dialogflow (que você encontra nas configurações do seu agente Dialogflow).
-    *   Substitua todo o conteúdo do objeto `DIALOGFLOW_SERVICE_ACCOUNT_KEY_JSON` pelo conteúdo real do arquivo JSON da chave da sua conta de serviço que você baixou.
-        *   **IMPORTANTE:** Manter chaves de conta de serviço diretamente no código do cliente é inseguro para aplicativos de produção. Para produção, você deve criar um servidor backend que lide com as chamadas para o Dialogflow, e o aplicativo se comunicaria com seu backend. O método atual é para facilitar os testes do protótipo.
+### 2. **Unzip the Project:**
 
-4.  **Descomente o Código de Chamada Real (Opcional - para teste direto, com ressalvas de segurança):**
-    *   No arquivo `ChatbotScreen.js`, na função `sendToDialogflow`, você encontrará seções comentadas para a chamada `fetch` real e o processamento da resposta. Se você configurou as credenciais e entende os riscos de segurança para um teste local, pode descomentar essas partes e comentar a seção de "SIMULAÇÃO DA RESPOSTA DO DIALOGFLOW".
-    *   Lembre-se que a autenticação para a API v2 do Dialogflow geralmente requer um token de acesso OAuth 2.0, que seria gerado por uma biblioteca como `google-auth-library` em um ambiente Node.js (backend) usando a chave da conta de serviço. A chamada direta do cliente com a chave completa é complexa e insegura.
+- Extract `cicloconecta-app.zip` contents into a folder on your machine.
 
-## Próximos Passos Sugeridos
+### 3. **Install Dependencies:**
 
-*   Testar exaustivamente o fluxo de chat no seu emulador/dispositivo.
-*   Expandir os intents e entidades no Dialogflow para cobrir mais tópicos.
-*   Refinar as respostas do chatbot para serem mais completas e empáticas.
-*   Implementar um backend seguro para intermediar as chamadas para o Dialogflow em um ambiente de produção.
-*   Adicionar mais funcionalidades às outras telas do aplicativo.
+- Open a terminal in the root project folder (where `package.json` is located).
+- Run:  
+  `npm install`  
+  or  
+  `yarn install` (if using Yarn)
 
-Boa sorte com os testes e o desenvolvimento!
+### 4. **Start Expo Development Server:**
 
+- In the same terminal, run:  
+  `npx expo start`
+- This will launch Metro Bundler in your browser and display a QR code.
+
+### 5. **Run on Emulator or Device:**
+
+- **Android emulator:** Press `a` in the terminal where Metro is running.
+- **iOS simulator:** Press `i` in the terminal.
+- **Physical device:** Open the **Expo Go** app and scan the QR code shown in the terminal or browser.
+
+---
+
+## 🤖 Configuring Real Integration with Dialogflow ES
+
+The screen `screens/ChatbotScreen.js` is prepared to communicate with a Dialogflow ES agent, but currently uses simulated responses.
+
+### To connect to your real Dialogflow agent:
+
+#### 1. **Create/Configure Your Dialogflow ES Agent:**
+
+- Visit the [Dialogflow ES console](https://dialogflow.cloud.google.com/)
+- Create a new agent or use an existing one
+- You can import example JSON intents from `/dialogflow_config/intents` (e.g., Greeting, MenstrualCycleInfo, etc.)
+- Train your agent after importing the intents
+
+#### 2. **Get Service Account Credentials:**
+
+- In Google Cloud Platform (GCP), go to "IAM & Admin" → "Service Accounts"
+- Create or use an existing service account with the role `Dialogflow API Client`
+- Generate a JSON key and download it
+
+#### 3. **Update the App Code:**
+
+- Open `/screens/ChatbotScreen.js` in your editor
+- Replace:
+  ```javascript
+  const DIALOGFLOW_PROJECT_ID = 'YOUR_PROJECT_ID_HERE';
+  const DIALOGFLOW_SERVICE_ACCOUNT_KEY_JSON = { /* ... JSON structure ... */ };
